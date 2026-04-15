@@ -14,6 +14,15 @@
     <itunes:explicit>false</itunes:explicit>
     <itunes:image href="https://paulpickens.github.io/jira-podcast/cover.png"/>
     <!-- EPISODES_START -->
+    <item>
+      <title>Ticket Briefing — 2026-04-15</title>
+      <description>Daily Jira ticket briefing for 2026-04-15. 466 words, ~2:48 listen.</description>
+      <enclosure url="https://paulpickens.github.io/jira-podcast/episodes/episode-2026-04-15.mp3" length="2699224" type="audio/mpeg"/>
+      <guid isPermaLink="false">jira-podcast-2026-04-15</guid>
+      <pubDate>Wed, 15 Apr 2026 05:00:00 GMT</pubDate>
+      <itunes:duration>2:48</itunes:duration>
+      <itunes:episodeType>full</itunes:episodeType>
+    </item>
     <!-- EPISODES_END -->
   </channel>
 </rss>

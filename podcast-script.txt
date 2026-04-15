@@ -1,0 +1,11 @@
+Good morning. It's Wednesday, April fifteenth, and your Jira queue is not getting shorter on its own.
+
+You're carrying fourteen active tickets across In Progress, To Do, and Pending. Let's break it down.
+
+In the In Progress column, you have two tickets. H D dash 3 2 4 2 is the Celsius Encompass login setup — that one was last touched two days ago, putting it right on the edge of stale. H D dash 3 2 1 8, the Xtreme Liquor file import with pending pricing adjustments, has been sitting for six days. That one's in progress in name only.
+
+In the To Do bucket: the QR code situation is a theme. H D dash 3 2 6 7 and H D dash 3 2 5 8 are both about the Paylink QR code missing from employee purchase invoices — two separate tickets, same problem, both logged yesterday and today. Worth checking whether these can be merged or resolved in one shot. Also in To Do: H D dash 3 2 6 5 for pallet tags printing with the wrong template, logged yesterday. And H D dash 3 1 8 4, adding Anheuser-Busch fields to the new customer form — that one is two days old and tipping into stale.
+
+The Pending list is where old tickets go to wait. H D dash 2 6 4 8 and H D dash 2 7 0 3 are both active today — EDI coordination for A and B Distributing and Dollar Tree chain store setup, both with activity this morning. H D dash 3 2 4 1, a back-office EDI invoice setup, was touched yesterday. But then things get ugly: H D dash 3 1 7 2 and H D dash 3 1 4 9 — IBC master file update and the 7-Eleven RIS transition — haven't moved since Monday. H D dash 2 8 9 2, a store and product group EDI setup, is five days stale. H D dash 3 2 1 7, the printer stuck on a firmware upgrade, is also five days stale. And the oldest one standing: H D dash 3 1 9 3, online ordering access for a Grove area customer, is eight days without an update.
+
+Here's your prioritization: knock out the two duplicate QR code tickets first — they're likely a quick config fix and affect employees directly. Then clear the printer firmware issue on H D dash 3 2 1 7, which is a concrete blocker. The H D dash 3 1 9 3 Grove customer online ordering ticket at eight days stale is overdue for either action or a status comment. And somebody needs to put real work into H D dash 3 2 1 8 or move it out of In Progress. Good luck out there.
