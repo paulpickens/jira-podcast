@@ -1,0 +1,10 @@
+=== Thu Apr 16 07:36:03 CDT 2026 ===
+Generating audio with macOS say (voice: Evan (Enhanced))...
+Audio saved: /Users/ppickens/Documents/jira-podcast/episodes/episode-2026-04-16.mp3 (2316791 bytes, 2:24)
+Updating RSS feed...
+awk: newline in string     <item>
+      <ti... at source line 1
+awk: newline in string     <item>
+      <ti... at source line 1
+awk: newline in string     <item>
+      <ti... at source line 1
