@@ -1,5 +1,5 @@
 #!/bin/bash
-cd "$HOME/Documents/jira-podcast"
+cd "$HOME/jira-podcast"
 git add .nojekyll index.html
 git commit -m "Add .nojekyll and index.html for GitHub Pages"
 git push origin main

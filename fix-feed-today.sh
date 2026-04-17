@@ -1,6 +1,6 @@
 #!/bin/bash
 set -euo pipefail
-cd ~/Documents/jira-podcast
+cd ~/jira-podcast
 
 ITEM_TMP=$(mktemp)
 cat > "$ITEM_TMP" << 'RSSITEM'

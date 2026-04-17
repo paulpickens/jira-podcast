@@ -1,5 +1,5 @@
 #!/bin/bash
-cd "$HOME/Documents/jira-podcast"
+cd "$HOME/jira-podcast"
 rm -f .git/index.lock .git/HEAD.lock .git/objects/maintenance.lock 2>/dev/null
 git add .nojekyll index.html fix-pages.command push-episode.command run-episode.command
 git commit -m "Add GitHub Pages config and helper scripts"

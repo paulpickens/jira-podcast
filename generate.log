@@ -14,3 +14,24 @@ Audio saved: /Users/ppickens/Documents/jira-podcast/episodes/episode-2026-04-17.
 Updating RSS feed...
 Pruning old episodes (keeping latest)...
 Pushing to GitHub...
+[main dcc98cf] Episode: 2026-04-17
+ 12 files changed, 66 insertions(+), 47 deletions(-)
+ create mode 100644 .gitignore
+ delete mode 100644 episodes/episode-2026-04-15.mp3
+ delete mode 100644 episodes/episode-2026-04-16.mp3
+ create mode 100644 episodes/episode-2026-04-17.mp3
+ create mode 100644 launchd-stderr.log
+ create mode 100644 launchd-stdout.log
+ create mode 100644 scripts/podcast-script-2026-04-16.txt
+ create mode 100644 scripts/podcast-script-2026-04-17.txt
+To https://github.com/paulpickens/jira-podcast.git
+   8356959..dcc98cf  main -> main
+Done. Episode live at: https://paulpickens.github.io/jira-podcast/episodes/episode-2026-04-17.mp3
+Feed URL: https://paulpickens.github.io/jira-podcast/feed.xml
+=== Fri Apr 17 07:36:55 CDT 2026 ===
+Episode already exists: /Users/ppickens/jira-podcast/episodes/episode-2026-04-17.mp3 — skipping.
+=== Fri Apr 17 07:38:02 CDT 2026 ===
+Generating audio with macOS say (voice: Evan (Enhanced))...
+Audio saved: /Users/ppickens/jira-podcast/episodes/episode-2026-04-17.mp3 (1969467 bytes, 2:03)
+Updating RSS feed...
+Pushing to GitHub...

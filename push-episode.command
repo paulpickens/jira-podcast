@@ -1,5 +1,5 @@
 #!/bin/bash
-cd "$HOME/Documents/jira-podcast"
+cd "$HOME/jira-podcast"
 echo "Pushing episode to GitHub..."
 git push origin main
 echo ""

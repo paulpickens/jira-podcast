@@ -6,13 +6,13 @@
 #   ./generate-episode.sh [script-file] [date]
 #
 # If no arguments, uses today's date and looks for the script at
-# ~/Documents/jira-podcast/podcast-script.txt
+# ~/jira-podcast/podcast-script.txt
 #
 # Requires: say (macOS), ffmpeg (brew install ffmpeg), git with push access
 
 set -euo pipefail
 
-REPO_DIR="$HOME/Documents/jira-podcast"
+REPO_DIR="$HOME/jira-podcast"
 EP_DIR="$REPO_DIR/episodes"
 LOG_FILE="$REPO_DIR/generate.log"
 
