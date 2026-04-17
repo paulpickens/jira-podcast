@@ -111,17 +111,25 @@ cat > "$ITEM_TMP" <<RSSITEM
     </item>
 RSSITEM
 
-TEMP_FEED=$(mktemp)
-# Insert contents of ITEM_TMP after the EPISODES_START marker
-sed -e "/<!-- EPISODES_START -->/r $ITEM_TMP" "$FEED_PATH" > "$TEMP_FEED"
-mv "$TEMP_FEED" "$FEED_PATH"
+# Replace everything between EPISODES_START and EPISODES_END with just the new item.
+# Keeps the feed to a single latest episode.
+python3 - "$FEED_PATH" "$ITEM_TMP" <<'PYEOF'
+import re, sys
+feed_path, item_path = sys.argv[1], sys.argv[2]
+with open(feed_path) as f: content = f.read()
+with open(item_path) as f: new_item = f.read().rstrip("\n")
+pattern = r'(<!-- EPISODES_START -->).*?(\s*<!-- EPISODES_END -->)'
+replacement = r'\1\n' + new_item + r'\n    <!-- EPISODES_END -->'
+content = re.sub(pattern, replacement, content, count=1, flags=re.DOTALL)
+with open(feed_path, "w") as f: f.write(content)
+PYEOF
 rm -f "$ITEM_TMP"
 
-# Prune old episodes (keep last 30)
+# Prune old episodes (keep only the latest one)
 EPISODE_COUNT=$(ls -1 "$EP_DIR"/*.mp3 2>/dev/null | wc -l | tr -d ' ')
-if [ "$EPISODE_COUNT" -gt 30 ]; then
-  echo "Pruning old episodes (keeping 30)..."
-  ls -1t "$EP_DIR"/*.mp3 | tail -n +31 | xargs rm -f
+if [ "$EPISODE_COUNT" -gt 1 ]; then
+  echo "Pruning old episodes (keeping latest)..."
+  ls -1t "$EP_DIR"/*.mp3 | tail -n +2 | xargs rm -f
 fi
 
 echo "Pushing to GitHub..."

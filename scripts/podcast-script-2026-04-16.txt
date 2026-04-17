@@ -1,0 +1,19 @@
+Good morning, Paul. This is the Ticket Podcast for Thursday, April sixteenth. Today's briefing hit another snag before it could get off the ground.
+
+The Jira data fetch failed again, but the error has changed. Yesterday the connector could not find the server. Today the connector reaches abdist.atlassian.net just fine, but the search endpoint itself is returning a 404 Not Found. The URL it's hitting is slash jira slash rest slash api slash three slash search slash jql, which is the newer path Atlassian rolled out during the search API migration. That path is returning not found, and the projects list is coming back empty. Taken together, that points to either an expired authentication token on the connector, or a version mismatch where the connector is calling the new endpoint but the account is not yet provisioned for it.
+
+No tickets were retrieved, so there is nothing to report on in progress work, to do items, pending tickets, or stale threads.
+
+Three quick things to try when you get in. First, check that the Jira connector is still authenticated under your Cowork settings, since an expired token will often surface as a 404 rather than a 401. Second, confirm the connector is not pinned to a deprecated API path. Third, verify your abdist cloud site is still linked to the integration and that your account can see its own tickets in the browser.
+
+In the meantime, stick to your normal rhythm. Open Jira manually, hit the quick wins first, update anything you haven't touched in more than forty eight hours, and flag the stale pile yourself.
+
+Normal service resumes tomorrow. Have a productive Thursday.
+
+--- TECHNICAL DETAILS ---
+Date: 2026-04-16
+Error: 404 Client Error: Not Found for url: https://abdist.atlassian.net/jira/rest/api/3/search/jql
+Secondary signal: jira_get_all_projects returned an empty list, which usually indicates the connector is authenticated to an account with no visible projects, or the auth token has expired.
+Query attempted: assignee = currentUser() AND status != Done ORDER BY updated DESC
+Likely causes, ranked: (1) expired or revoked OAuth token on the Atlassian MCP connector, (2) connector calling the new search/jql endpoint against an account not provisioned for it, (3) site URL or cloudId mismatch in the connector config.
+Suggested fix: reauthenticate the Jira connector in Cowork settings. If that doesn't resolve it, roll the connector back to the legacy /rest/api/3/search endpoint or update to a build that handles the new search API migration cleanly.
