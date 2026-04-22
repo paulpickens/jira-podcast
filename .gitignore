@@ -1,1 +1,4 @@
 .env
+launchd-stdout.log
+launchd-stderr.log
+.DS_Store

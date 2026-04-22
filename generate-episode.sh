@@ -72,6 +72,20 @@ PYEOF
 
 find "$EPISODES_DIR" -name "episode-*.m4a" -type f | sort -r | tail -n +31 | xargs -I {} rm -f {}
 
+# Stash any stray local changes (e.g. log files) so rebase can't fail
+STASHED=0
+if ! git diff --quiet || ! git diff --cached --quiet; then
+  git stash push -u -m "auto-stash before episode push" && STASHED=1
+fi
+
+if ! git pull --rebase origin main; then
+  echo "Pull failed; aborting." >&2
+  [[ $STASHED -eq 1 ]] && git stash pop
+  exit 1
+fi
+
+[[ $STASHED -eq 1 ]] && git stash pop || true
+
 git add -A
 if git diff --cached --quiet; then
   echo "No changes to commit."
