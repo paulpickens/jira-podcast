@@ -9,6 +9,14 @@
     <description>Daily Jira ticket briefing for Paul Pickens. Auto-generated each weekday morning.</description>
     <language>en-us</language>
     <item>
+      <title>Jira Briefing — Thursday, May 14, 2026</title>
+      <description>Daily Jira ticket briefing for Paul Pickens.</description>
+      <pubDate>Thu, 14 May 2026 10:15:05 GMT</pubDate>
+      <enclosure url="https://paulpickens.github.io/jira-podcast/episodes/episode-2026-05-14.m4a" length="675609" type="audio/mp4"/>
+      <guid isPermaLink="false">jira-podcast-2026-05-14</guid>
+      <itunes:duration>2:37</itunes:duration>
+    </item>
+    <item>
       <title>Jira Briefing — Wednesday, May 13, 2026</title>
       <description>Daily Jira ticket briefing for Paul Pickens.</description>
       <pubDate>Wed, 13 May 2026 10:15:05 GMT</pubDate>
@@ -152,7 +160,7 @@
       <guid isPermaLink="false">jira-podcast-2026-04-20</guid>
       <itunes:duration>2:06</itunes:duration>
     </item>
-    <lastBuildDate>Wed, 13 May 2026 10:15:05 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 14 May 2026 10:15:05 GMT</lastBuildDate>
     <itunes:author>Ticket Podcast Bot</itunes:author>
     <itunes:summary>A short daily podcast that reads out your open Jira tickets, flags stale items, and suggests priorities.</itunes:summary>
     <itunes:category text="Technology"/>
